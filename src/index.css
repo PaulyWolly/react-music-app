@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(195, 126, 34, 1) 0%,
+    rgba(234, 253, 45, 0.5) 100%
+  );
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-player {
+  display: block;
+  background-image: linear-gradient(to bottom, rgb(211, 212, 236), rgb(10, 64, 212));
+  margin: 0px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.c-player > h3 {
+  padding: 2px;
+}
+
+.c-player > h4 {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+.c-player > p {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.c-player > p span {
+  font-weight: 400;
+  width: fit-content;
+}
+
+.c-player .pauls-player {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.c-player--details .details-img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  bottom: 15px;
+}
+
+.c-player--details .details-img img {
+  display: block;
+  margin: 50px auto;
+  object-fit: contain;
+  width: 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8),
+    -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.c-player--details .details-img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  border: 3px dashed rgba(255, 206, 0, 1);
+}
+
+.c-player--details .details-title {
+  color: #eee;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 20px;
+}
+
+.c-player--details .details-artist {
+  color: #aaa;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 20px;
+}
+
+.c-player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  bottom: 20px;
+}
+
+.c-player--controls .playPause-icon {
+  position: relative;
+  left: 0px;
+  padding-left: 2px;
+}
+
+.c-player--controls .play-btn {
+  display: flex;
+  margin: 0 20px;
+  padding: 18px;
+  border-radius: 50%;
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+    -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.4); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: #ffce00;
+  color: rgb(236, 230, 230);
+  font-size: 26px;
+  cursor: pointer;
+
+}
+
+.c-player--controls .play-btn:hover {
+  color: #ffffff;
+  /* background-color: inherit; */
+  background-color: #ffce00;
+}
+
+.c-player--audio {
+  margin-top: -20px;
+  margin-bottom: 5px;
+  outline-width: 0;
+  opacity: 0.4;
+  position: relative;
+  bottom: 10px;
+}
+
+.c-player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgb(187, 184, 184);
+  font-size: 18px;
+}
+.c-player--controls .skip-btn:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1);
+  color: white;
+  background-color: inherit;
+}
+
+audio::-webkit-media-controls-play-button {
+  display: none;
+}
